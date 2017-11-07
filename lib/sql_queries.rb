@@ -23,7 +23,7 @@ def selects_user_names_and_amounts_of_all_pledges_grouped_by_name_then_orders_th
 end
 
 def selects_the_category_names_and_pledge_amounts_of_all_pledges_in_the_music_category
-  "select category, (select sum(amount) from pledges where project_id=project_id) from projects where projects.category='music'"
+  "select category, pledges.amount from projects inner join "
 end
 
 def selects_the_category_name_and_the_sum_total_of_the_all_its_pledges_for_the_books_category
